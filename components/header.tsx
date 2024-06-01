@@ -7,8 +7,8 @@ export const Header: FC = () => {
 
     return (
         <header>
-            <div className={clsx('text-4xl font-bold', dancingScript.className)}>FloraVenn</div>
-            <p>Username</p>
+            <div className={clsx('text-4xl font-bold ', dancingScript.className)}>FloraVenn</div>
+            <p className="text-highlight">Username</p>
         </header>
     )
 }
