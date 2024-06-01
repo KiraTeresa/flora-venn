@@ -5,7 +5,7 @@ interface PlantCardProps {
     plant: PlantType,
 }
 
-export const PlantCard: FC<PlantCardProps> = ({ plant }) => {
+export const PlantCardMobile: FC<PlantCardProps> = ({ plant }) => {
     return (
         <Link href={`/plant/${plant.id}`} className="bg-white flex gap-2 items-center p-2">
             <img src={plant.image} alt={plant.name} className="h-20 w-20" />

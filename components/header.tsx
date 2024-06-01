@@ -4,9 +4,14 @@ import { FC } from "react";
 
 export const Header: FC = () => {
     return (
-        <header className="bg-white flex justify-between items-center px-5 py-2 my-5">
-            <div className={clsx('text-4xl font-bold ', dancingScript.className)}>FloraVenn</div>
-            <p className="text-highlight">Username</p>
+        <header className="bg-white px-5 my-5">
+            <div className="relative max-w-screen-xl m-auto flex justify-between items-center py-2">
+                <div className="flex">
+                    <img src="/images/Illustration.png" alt="Illustration women with plant" className="hidden absolute h-16 w-16 bottom-0 md:block" />
+                    <p className={clsx('text-4xl font-bold md:ps-16', dancingScript.className)}>FloraVenn</p>
+                </div>
+                <p className="text-highlight">Username</p>
+            </div>
         </header>
     )
 }

@@ -1,9 +1,10 @@
-import { PlantCard } from "@/components/plantCard";
+import { PlantCardMobile } from "@/components/plantCardMobile";
 import { Task } from "@/components/task";
 import { MOCK_PLANT_DATA } from "@/src/constants/plant-data";
 import clsx from "clsx";
 import { dancingScript } from "../fonts";
 import { CustomButton } from "@/components/button";
+import { PlantCardDesktop } from "@/components/plantCardDesktop";
 
 export default function Dashboard() {
     const plantCount = MOCK_PLANT_DATA.length;
@@ -17,24 +18,33 @@ export default function Dashboard() {
     })
 
     return (
-        <main className="mx-5">
-            <section className="flex flex-col gap-2 text-black">
+        <main className="max-w-screen-xl mx-5 md:m-auto md:flex md:gap-20">
+            <section className="flex flex-col gap-2 text-black md:w-1/3 md:ms-5 md:mt-5">
                 <h3 className="font-semibold">Today's tasks</h3>
                 {tasks.map((plant) => <Task plant={plant} key={plant.id} />)}
             </section>
-            <section className="text-center my-10">
-                <p className="font-light">You have currently</p>
-                <p className={clsx('text-3xl font-bold', dancingScript.className)}>{plantCount}</p>
-                <p className="font-light">plant{plantCount > 1 && 's'} in your care</p>
-                <CustomButton text="add new plant"
-                    navigateTo="/new-plant" className="text-3xl mt-5" />
-            </section>
-            <section className=" text-black">
-                <h3 className="font-semibold mb-2">Your plants</h3>
-                {MOCK_PLANT_DATA.map((plant) =>
-                    <PlantCard plant={plant} key={plant.id} />
-                )}
-            </section>
+            <div className="md:w-full md:me-5">
+                <section className="text-center my-10">
+                    <p className="font-light md:text-2xl">You have currently</p>
+                    <p className={clsx('text-3xl font-bold', dancingScript.className)}>{plantCount}</p>
+                    <p className="font-light md:text-2xl">plant{plantCount > 1 && 's'} in your care</p>
+                    <CustomButton text="add new plant"
+                        navigateTo="/new-plant" className="text-2xl mt-5" />
+                </section>
+                <section className=" text-black">
+                    <h3 className="font-semibold mb-2">Your plants</h3>
+                    <div className="md:hidden">
+                        {MOCK_PLANT_DATA.map((plant) =>
+                            <PlantCardMobile plant={plant} key={plant.id} />
+                        )}
+                    </div>
+                    <div className="hidden md:grid md:grid-cols-2 md:gap-4 md:block">
+                        {MOCK_PLANT_DATA.map((plant) =>
+                            <PlantCardDesktop plant={plant} key={plant.id} />
+                        )}
+                    </div>
+                </section>
+            </div>
         </main>
     )
 }
