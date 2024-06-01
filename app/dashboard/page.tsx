@@ -1,3 +1,4 @@
+import { PlantCard } from "@/components/plantCard";
 import { Task } from "@/components/task";
 import { MOCK_PLANT_DATA } from "@/src/constants/plant-data";
 
@@ -12,13 +13,18 @@ export default function Dashboard() {
     })
 
     return (
-        <>
-            <section className="flex flex-col gap-2 mx-5 text-black">
+        <main className="mx-5">
+            <section className="flex flex-col gap-2 text-black">
                 <h3 className="font-semibold">Today's tasks</h3>
                 {tasks.map((plant) => <Task plant={plant} key={plant.id} />)}
             </section>
             <section>Plant count</section>
-            <section>Your plants</section>
-        </>
+            <section className=" text-black">
+                <h3 className="font-semibold mb-2">Your plants</h3>
+                {MOCK_PLANT_DATA.map((plant) =>
+                    <PlantCard plant={plant} key={plant.id} />
+                )}
+            </section>
+        </main>
     )
 }
