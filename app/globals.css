@@ -30,6 +30,10 @@
   background-color: var(--input-color);
 }
 
+.bg-button {
+  background-color: var(--primary-color);
+}
+
 .text-primary {
   color: var(--primary-color);
 }
