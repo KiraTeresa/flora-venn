@@ -14,6 +14,9 @@ module.exports = {
       'highlight-color': 'var(--highlight-color)',
       'input-color': 'var(--input-color)',
       },
+      spacing: {
+        '500': '500px',
+      }
     }  
   },
   plugins: [],
