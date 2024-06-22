@@ -38,7 +38,7 @@ export default function Dashboard() {
                             <PlantCardMobile plant={plant} key={plant.id} />
                         )}
                     </div>
-                    <div className="hidden md:grid md:grid-cols-2 md:gap-4 md:block">
+                    <div className="hidden md:grid md:grid-cols-2 md:gap-4">
                         {MOCK_PLANT_DATA.map((plant) =>
                             <PlantCardDesktop plant={plant} key={plant.id} />
                         )}
