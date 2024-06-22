@@ -1,6 +1,6 @@
 import { PlantCardMobile } from "@/components/plantCardMobile";
 import { Task } from "@/components/task";
-import { MOCK_PLANT_DATA } from "@/src/constants/plant-data";
+import { MOCK_PLANT_DATA } from "@/src/constants/MOCK-plant-data";
 import clsx from "clsx";
 import { dancingScript } from "../fonts";
 import { CustomButton } from "@/components/button";
@@ -18,7 +18,7 @@ export default function Dashboard() {
     })
 
     return (
-        <main className="max-w-screen-xl mx-5 md:m-auto md:flex md:gap-20">
+        <main className="max-w-screen-xl mx-5 mb-5 md:m-auto md:flex md:gap-20">
             <section className="flex flex-col gap-2 text-black md:w-1/3 md:ms-5 md:mt-5">
                 <h3 className="font-semibold">Today's tasks</h3>
                 {tasks.map((plant) => <Task plant={plant} key={plant.id} />)}
