@@ -3,7 +3,7 @@
 import { dancingScript } from "@/app/fonts";
 import clsx from "clsx";
 import { FC } from "react";
-import { CustomButton } from "./button";
+import { CustomButton } from "./universals/button";
 
 export const Login: FC = () => {
     const onLogin = () => {

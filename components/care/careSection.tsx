@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { InfoBox } from "../infoBox"
+import { InfoBox } from "../universals/infoBox"
 import { CareHistory } from "./careHistory"
 import { CareHistoryElement } from "@/src/types/care.type"
 

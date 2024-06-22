@@ -2,7 +2,7 @@ import { featureDescriptions } from "@/src/constants/feature-description";
 import { dancingScript } from "./fonts";
 import clsx from "clsx";
 import { Login } from "@/components/login";
-import { Accordion } from "@/components/accordion";
+import { Accordion } from "@/components/universals/accordion";
 
 export default function Home() {
 

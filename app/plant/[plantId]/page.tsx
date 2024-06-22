@@ -1,6 +1,6 @@
 import { MOCK_PLANT_DATA } from "@/src/constants/MOCK-plant-data";
 import { StatsList } from "@/components/stats/statsList";
-import { InfoBox } from "@/components/infoBox";
+import { InfoBox } from "@/components/universals/infoBox";
 import { CareSection } from "@/components/care/careSection";
 import { CareHistory } from "@/components/care/careHistory";
 

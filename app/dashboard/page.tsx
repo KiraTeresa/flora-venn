@@ -1,10 +1,10 @@
-import { PlantCardMobile } from "@/components/plantCardMobile";
-import { Task } from "@/components/task";
+import { PlantCardMobile } from "@/components/dashboard/plantCardMobile";
+import { Task } from "@/components/dashboard/task";
 import { MOCK_PLANT_DATA } from "@/src/constants/MOCK-plant-data";
 import clsx from "clsx";
 import { dancingScript } from "../fonts";
-import { CustomButton } from "@/components/button";
-import { PlantCardDesktop } from "@/components/plantCardDesktop";
+import { CustomButton } from "@/components/universals/button";
+import { PlantCardDesktop } from "@/components/dashboard/plantCardDesktop";
 
 export default function Dashboard() {
     const plantCount = MOCK_PLANT_DATA.length;

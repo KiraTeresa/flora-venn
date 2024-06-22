@@ -1,3 +1,4 @@
+import { PlantType } from "@/src/types/plant.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC } from "react";
